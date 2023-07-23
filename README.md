@@ -23,7 +23,7 @@ python3 get_nasa_photo.py
 ```
 Скачивание фото со Spacex:
 ```
-python3 fetch_spacex_last_launch.py 
+python3 fetch_spacex_images.py 
 ```
 Скачивание фото EPIC:
 ```
