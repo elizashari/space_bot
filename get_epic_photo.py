@@ -14,11 +14,11 @@ def get_epic(nasa_token):
     for number, image in enumerate(epic_response):
         filename = f"nasa_epic_{number}.png"
         file_path = os.path.join(dir_name, filename)
-        image = epic_response[number]["image"]
-        image_date = epic_response[number]["date"]
+        image_name = image["image"]
+        image_date = image["date"]
         image_datetime = datetime.datetime.fromisoformat(image_date)
         formatted_image_date = image_datetime.strftime("%Y/%m/%d")
-        epic_url = f"https://api.nasa.gov/EPIC/archive/natural/{formatted_image_date}/png/{image}.png"
+        epic_url = f"https://api.nasa.gov/EPIC/archive/natural/{formatted_image_date}/png/{image_name}.png"
         download_image(file_path, epic_url, params=payload)
 
 
