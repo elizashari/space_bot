@@ -9,8 +9,3 @@ def download_image(file_path, url, params=None):
     with open(file_path, "wb") as file:
         file.write(response.content)
 
-
-    file_path = urlsplit(url).path
-    file_path = unquote(file_path)
-    _, file_ext = os.path.splitext(file_path)
-    return file_ext
